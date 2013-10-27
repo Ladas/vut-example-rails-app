@@ -10,7 +10,7 @@ Prerequisites
 =============
 
 rvm
-  \curl -L https://get.rvm.io | bash
+    \curl -L https://get.rvm.io | bash
   source $HOME/.rvm/scripts/rvm
   
 install ruby 2.0

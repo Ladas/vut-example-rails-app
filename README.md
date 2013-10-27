@@ -51,3 +51,17 @@ go to the dir the and install all gems
 start the app
 
     rails server -e development -p 8080
+    
+Lesson 1
+========
+
+
+Lesson 2
+========
+
+
+
+Lesson 3
+========
+
+Deploy to openshift

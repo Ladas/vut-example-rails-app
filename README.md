@@ -68,8 +68,12 @@ Scaffold
 We can easily generate parts of appliction. Lets say you have company that provides some services and you want to 
 create and manage that services in our application.
 
-rails generate scaffold Service type:text company:string contact:string phone:string email:string description:text price:float price_with_vat:float payed:bool
+    rails generate scaffold Service type:text company:string contact:string phone:string email:string description:text price:float price_with_vat:float payed:boolean
 
+This creates also migration, which is a prescription for creating database table. You can create the database table by running:
+
+    rake db:migrate
+    rake -T # shows all available rakes, you can easily write your own rakes
 
 STI
 ---

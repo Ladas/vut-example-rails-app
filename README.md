@@ -51,9 +51,36 @@ go to the dir the and install all gems
 start the app
 
     rails server -e development -p 8080
+   
+   
+Foreword
+========
+
+Ruby on Rails(RoR) is MVC framework. Is it? see e.g. http://stackoverflow.com/questions/1931335/what-is-mvc-in-ruby-on-rails
+It's main purpose is application development.
     
 Lesson 1
 ========
+
+Scaffold
+--------
+
+We can easily generate parts of appliction. Lets say you have company that provides some services and you want to 
+create and manage that services in our application.
+
+rails generate scaffold Service type:text company:string description:text price:float price_with_vat:float
+
+
+STI
+---
+
+Single table inheritance(STI) is very usable when we have similar models (can be represented by almost the same database 
+table) but we want different behaviour for them. Rails models uses the column 'type' for marking the type of the model. 
+(For more informations, use google, there are many examples)
+
+Let's say we want to reckognize different kind of services, e.g Advertisement, Analysis, Web, Intranet ...
+
+
 
 
 Lesson 2

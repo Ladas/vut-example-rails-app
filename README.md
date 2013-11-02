@@ -68,7 +68,7 @@ Scaffold
 We can easily generate parts of appliction. Lets say you have company that provides some services and you want to 
 create and manage that services in our application.
 
-rails generate scaffold Service type:text company:string description:text price:float price_with_vat:float
+rails generate scaffold Service type:text company:string contact:string phone:string email:string description:text price:float price_with_vat:float payed:bool
 
 
 STI
@@ -80,6 +80,19 @@ table) but we want different behaviour for them. Rails models uses the column 't
 
 Let's say we want to reckognize different kind of services, e.g Advertisement, Analysis, Web, Intranet ...
 
+
+Explaning ruby parts on this example
+------------------------------------
+
+1. Ruby string and arrays in action
+2. Explaining inheritance in ruby on STI models
+
+
+
+Optional homework
+-----------------
+
+How would you deal when customer wants to order more services?
 
 
 

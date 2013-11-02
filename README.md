@@ -84,8 +84,8 @@ table) but we want different behaviour for them. Rails models uses the column 't
 
 Let's say we want to reckognize different kind of services, e.g Advertisement, Analysis, Web, Intranet ...
 
-1. add directory app/models/services app/models/services/advertisement.rb
-2. add a subclass of services to 
+-1. add directory app/models/services app/models/services/advertisement.rb
+-2. add a subclass of services to 
 
 ```
 class Advertisement < Service
@@ -93,7 +93,7 @@ class Advertisement < Service
 end
 ```
 
-3. add app/controllers/advertisements_controller.rb
+-3. add app/controllers/advertisements_controller.rb
 
 ```
 class AdvertisementsController < ServicesController
@@ -119,13 +119,13 @@ class AdvertisementsController < ServicesController
 end
 ```
 
-4. add line to config_routes.rb
+-4. add line to config_routes.rb
 
 ```
 resources :advertisements
 ```
 
-5. go to http://localhost:8080/webs/new in your browser
+-5. go to http://localhost:8080/webs/new in your browser
 
 
 Checkout to branch that has steps above prepared

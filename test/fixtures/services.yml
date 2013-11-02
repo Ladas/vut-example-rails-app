@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  type: MyText
+  company: MyString
+  contact: MyString
+  phone: MyString
+  email: MyString
+  description: MyText
+  price: 1.5
+  price_with_vat: 1.5
+  payed: false
+
+two:
+  type: MyText
+  company: MyString
+  contact: MyString
+  phone: MyString
+  email: MyString
+  description: MyText
+  price: 1.5
+  price_with_vat: 1.5
+  payed: false

@@ -1,0 +1,46 @@
+<h1>Listing services</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Company</th>
+      <th>Contact</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Price with vat</th>
+      <th>Payed</th>
+      <th>Secret Method</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @services.each do |service| %>
+      <tr>
+        <td><%= service.type %></td>
+        <td><%= service.company %></td>
+        <td><%= service.contact %></td>
+        <td><%= service.phone %></td>
+        <td><%= service.email %></td>
+        <td><%= service.description %></td>
+        <td><%= service.price %></td>
+        <td><%= service.price_with_vat %></td>
+        <td><%= service.payed %></td>
+        <td><%= service.try(:secret_method) %><%#= service.secret_method if service.respond_to? :secret_method %> </td>
+        <td><%= link_to 'Show', service %></td>
+        <td><%= link_to 'Edit', polymorphic_path([:edit, service]) %></td>
+        <td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Web', new_web_path %>
+<%= link_to 'New Advertisement', new_advertisement_path %>

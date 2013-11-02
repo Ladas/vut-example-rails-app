@@ -125,6 +125,9 @@ end
 resources :advertisements
 ```
 
+run 'rake routes' to see all routes of your application
+
+
 -5. go to http://localhost:8080/webs/new in your browser
 
 

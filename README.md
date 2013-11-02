@@ -142,18 +142,18 @@ Explaning ruby parts on this example
 2. Explaining inheritance in ruby on STI models
 
 
-
 Optional homework
 -----------------
 
-1. Optimize AdvertisementsController and WebsController, it duplicates to much code 
-2. How would you deal when customer wants to order more services?
+1. Optimize AdvertisementsController and WebsController, it duplicates to much code. Use beauty of dynamic languages.
+2. How would you deal with situation when customer wants to order more services at once?
 
 
 
 Lesson 2
 ========
 
+Modules
 
 
 Lesson 3

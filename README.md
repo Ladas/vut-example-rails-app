@@ -84,6 +84,54 @@ table) but we want different behaviour for them. Rails models uses the column 't
 
 Let's say we want to reckognize different kind of services, e.g Advertisement, Analysis, Web, Intranet ...
 
+1. add directory app/models/services app/models/services/advertisement.rb
+2. add a subclass of services to 
+
+```
+class Advertisement < Service
+  validates_presence_of :email
+end
+```
+
+3. add app/controllers/advertisements_controller.rb
+
+```
+class AdvertisementsController < ServicesController
+  def create
+    @service = Advertisement.new(service_params)
+    super
+  end
+
+  def new
+    @service = Advertisement.new
+  end
+
+  private
+  # Use callbacks to share common setup or constraints between actions.
+  def set_service
+    @service = Advertisement.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def service_params
+    params.require(:advertisement).permit(:company, :contact, :phone, :email, :description, :price, :price_with_vat, :payed)
+  end
+end
+```
+
+4. add line to config_routes.rb
+
+    resources :advertisements
+
+5. go to http://localhost:8080/webs/new in your browser
+
+
+Checkout to branch that has steps above prepared
+------------------------------------------------
+
+    git fetch --all
+    git checkout lesson_1
+
 
 Explaning ruby parts on this example
 ------------------------------------

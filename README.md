@@ -121,7 +121,9 @@ end
 
 4. add line to config_routes.rb
 
-    resources :advertisements
+```
+resources :advertisements
+```
 
 5. go to http://localhost:8080/webs/new in your browser
 

@@ -68,7 +68,7 @@ Scaffold
 We can easily generate parts of appliction. Lets say you have company that provides some services and you want to 
 create and manage that services in our application.
 
-    rails generate scaffold Service type:text company:string contact:string phone:string email:string description:text price:float price_with_vat:float payed:boolean
+    rails generate scaffold Service type:string company:string contact:string phone:string email:string description:text price:float price_with_vat:float payed:boolean
 
 This creates also migration, which is a prescription for creating database table. You can create the database table by running:
 
@@ -80,7 +80,7 @@ STI
 
 Single table inheritance(STI) is very usable when we have similar models (can be represented by almost the same database 
 table) but we want different behaviour for them. Rails models uses the column 'type' for marking the type of the model. 
-(For more informations, use google, there are many examples)
+(For more informations, use google, there are many examples like this http://blog.thirst.co/post/14885390861/rails-single-table-inheritance)
 
 Let's say we want to reckognize different kind of services, e.g Advertisement, Analysis, Web, Intranet ...
 
@@ -96,7 +96,8 @@ Explaning ruby parts on this example
 Optional homework
 -----------------
 
-How would you deal when customer wants to order more services?
+1. Optimize AdvertisementsController and WebsController, it duplicates to much code 
+2. How would you deal when customer wants to order more services?
 
 
 

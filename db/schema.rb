@@ -11,6 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20131102101201) do
+
+  create_table "services", force: true do |t|
+    t.string   "type"
+    t.string   "company"
+    t.string   "contact"
+    t.string   "phone"
+    t.string   "email"
+    t.text     "description"
+    t.float    "price"
+    t.float    "price_with_vat"
+    t.boolean  "payed"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

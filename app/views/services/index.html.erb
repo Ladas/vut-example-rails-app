@@ -31,7 +31,17 @@
         <td><%= service.price %></td>
         <td><%= service.price_with_vat %></td>
         <td><%= service.payed %></td>
-        <td><%= service.try(:secret_method) %><%#= service.secret_method if service.respond_to? :secret_method %> </td>
+
+        <td><%= service.payed %></td>
+
+        <% case service.class.to_s %>
+          <% when "Web", "Advertisement" %>
+            <td>THE WEB or ADV<td>
+          <% else %>
+            <td>none</td>
+        <% end %>
+        <td><%= service.try(:secret_method) %>
+          <%= service.secret_method if service.respond_to? :secret_method %> </td>
         <td><%= link_to 'Show', service %></td>
         <td><%= link_to 'Edit', polymorphic_path([:edit, service]) %></td>
         <td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td>

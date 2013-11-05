@@ -1,10 +1,17 @@
 class ServicesController < ApplicationController
+  before_action :fields
   before_action :set_service, only: [:show, :edit, :update, :destroy]
+
+  def fields
+    @fields = [:company,:contact,:phone,:email,:description,:price,:price_with_vat,:payed]
+  end
+
+
 
   # GET /services
   # GET /services.json
   def index
-    @services = Service.all
+    @services = Service.filter_by_comp("%web%")
   end
 
   # GET /services/1
@@ -41,6 +48,7 @@ class ServicesController < ApplicationController
   # PATCH/PUT /services/1
   # PATCH/PUT /services/1.json
   def update
+    puts service_params.inspect
     respond_to do |format|
       if @service.update(service_params)
         format.html { redirect_to @service, notice: 'Service was successfully updated.' }
@@ -70,6 +78,6 @@ class ServicesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def service_params
-      params.require(:service).permit(:type, :company, :contact, :phone, :email, :description, :price, :price_with_vat, :payed)
+      params.require(:service).permit(@service.fields)
     end
 end

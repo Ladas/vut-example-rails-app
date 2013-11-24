@@ -213,7 +213,7 @@ load_and_authorize_resource
 before_filter :authenticate_user!
 ```
 
--9. Catch unauthorized exception
+-10. Catch unauthorized exception
 
 ```
 # to app/controllers/application_controller.rb to second line

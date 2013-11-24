@@ -159,6 +159,8 @@ Lesson 2
 Adding users
 ------------
 
+# sources https://github.com/EppO/rolify/wiki/Tutorial
+
 -1. Add devise + cancan + rolify GemFile and install them
 
 ```
@@ -194,10 +196,27 @@ bundle install
 
     rails generate devise:views users
 
+-8. Configure
 
+```
+# to app/models/ability.rb add to initialize method
+if user.has_role? :admin
+  can :manage, :all
+else
+  can :read, :all
+  can :manage, Advertisement
+end
+
+# to app/controllers/services_controller.rb add to second line
+load_and_authorize_resource
+before_filter :authenticate_user!
+```
+
+-9. Create a user in Ui by Sign UP, and try to edit web and advertisement
 
 Modules
 -------
+
 
 
 Lesson 3

@@ -159,7 +159,7 @@ Lesson 2
 Adding users
 ------------
 
-# sources https://github.com/EppO/rolify/wiki/Tutorial
+sources https://github.com/EppO/rolify/wiki/Tutorial
 
 -1. Add devise + cancan + rolify GemFile and install them
 

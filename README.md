@@ -212,7 +212,7 @@ load_and_authorize_resource
 before_filter :authenticate_user!
 ```
 
--9. Create a user in Ui by Sign UP, and try to edit web and advertisement
+-9. Create a user in UI by Sign Up link and try to edit web and advertisement
 
 Modules
 -------

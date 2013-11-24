@@ -1,4 +1,6 @@
 class ServicesController < ApplicationController
+  load_and_authorize_resource
+  before_filter :authenticate_user!
   before_action :fields
   before_action :set_service, only: [:show, :edit, :update, :destroy]
 
@@ -6,12 +8,11 @@ class ServicesController < ApplicationController
     @fields = [:company,:contact,:phone,:email,:description,:price,:price_with_vat,:payed]
   end
 
-
-
   # GET /services
   # GET /services.json
   def index
-    @services = Service.filter_by_comp("%web%")
+    # @services = Service.filter_by_comp("%web%")
+    @services = Service.all
   end
 
   # GET /services/1

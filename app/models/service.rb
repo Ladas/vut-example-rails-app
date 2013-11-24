@@ -1,4 +1,5 @@
 class Service < ActiveRecord::Base
+
     def fields
         [:company,:contact,:phone,:email]
     end

@@ -1,4 +1,5 @@
 LearnRails::Application.routes.draw do
+  devise_for :users
   resources :services
   resources :webs
   resources :advertisements do

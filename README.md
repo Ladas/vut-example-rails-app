@@ -227,7 +227,7 @@ rescue_from CanCan::AccessDenied do |exception|
 end
 ```
 
--9. Create a user in UI by Sign Up link and try to edit web and advertisement
+-10. Create a user in UI by Sign Up link and try to edit web and advertisement
 
 Modules
 -------

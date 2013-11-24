@@ -205,11 +205,26 @@ if user.has_role? :admin
 else
   can :read, :all
   can :manage, Advertisement
+  cannot :destroy, Advertisement
 end
 
 # to app/controllers/services_controller.rb add to second line
 load_and_authorize_resource
 before_filter :authenticate_user!
+```
+
+-9. Catch unauthorized exception
+
+```
+# to app/controllers/application_controller.rb to second line
+rescue_from CanCan::AccessDenied do |exception|
+    redirect_to root_url, :alert => exception.message
+end
+
+# or 
+rescue_from CanCan::AccessDenied do |exception|
+    redirect_to :back, :alert => exception.message
+end
 ```
 
 -9. Create a user in UI by Sign Up link and try to edit web and advertisement

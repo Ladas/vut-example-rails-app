@@ -156,7 +156,48 @@ Optional homework
 Lesson 2
 ========
 
+Adding users
+------------
+
+-1. Add devise + cancan + rolify GemFile and install them
+
+```
+gem 'devise'
+gem 'cancan'
+gem 'rolify'
+
+#run
+bundle install
+```
+
+-2. Run Devise generator
+
+    rails generate devise:install
+    
+-3. Create the User model from Devise
+
+    rails generate devise User
+
+-4. Create the Ability class from CanCan
+
+    rails generate cancan:ability
+
+-5. Create the Role class from rolify
+
+    rails generate rolify:role
+
+-6. Run migrations
+
+    rake db:migrate
+
+-7. Generate views for users administration 
+
+    rails generate devise:views users
+
+
+
 Modules
+-------
 
 
 Lesson 3
